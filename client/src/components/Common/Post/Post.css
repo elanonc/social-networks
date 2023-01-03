@@ -1,0 +1,61 @@
+.post {
+    margin-top: 10px;
+    background-color: #06b606;
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.likes, .dados {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+}
+
+.mensagem {
+    display: flex;
+    justify-content: center;
+}
+
+.nome {
+    font-size: 20px;
+}
+
+.texto, .qtdLikes {
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.comentarios {
+    color: #000;
+    border-top: solid;
+    border-top-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.comentarios-usuario {
+    display: flex;
+    align-items: center;
+}
+
+.usuario {
+    text-transform: uppercase;
+    margin: 10px;
+} 
+
+.comentarios-adicionar {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+input {
+    background: #56585b;
+    border: 5px solid #56585b;
+    color: #fff;
+    padding: 0 50px;
+}

@@ -1,0 +1,26 @@
+.container {
+    margin-top: 200px;
+}
+
+.form-container {
+    display: grid;
+    place-content: center;
+}
+
+.label {
+    font-family: sans-serif;
+    margin-right: 10px;
+}
+
+.input-container: {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.button-container {
+    margin-top: 10px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}

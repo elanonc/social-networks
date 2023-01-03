@@ -1,34 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useState, createContext } from 'react';
+import './App.css';
+// import { PaginaFeed } from './components/Pages/PaginaFeed/PaginaFeed';
+
+import { PaginaFeed } from "./components/Pages/PaginaFeed/PaginaFeed";
+import { PaginaPostar } from "./components/Pages/PaginaPostar/PaginaPostar";
+import { PaginaCadastro } from "./components/Pages/PaginaCadastro/PaginaCadastro";
+import { PaginaLogin } from './components/Pages/PaginaLogin/PaginaLogin';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+export const authContext = createContext(null);
 
 function App() {
-  const [count, setCount] = useState(0)
+  
+  const [token, setToken] = useState(localStorage.getItem("token"));
+
+  const setTokenLocal = (token) => {
+    setToken(token);
+    localStorage.setItem("token", token);
+  };
 
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <authContext.Provider value={{ token: token, setToken: setTokenLocal }}>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={token == null ? <PaginaLogin /> : <PaginaFeed />} ></Route>
+            {/* <Route path="/feed" element={<PaginaFeed/>}></Route> */}
+            <Route path="/cadastro" element={<PaginaCadastro/>}></Route>
+            <Route path="/postar" element={<PaginaPostar/>}></Route>
+            <Route path="/login" element={<PaginaLogin />}></Route>
+          </Routes>
+        </BrowserRouter>
+      </authContext.Provider>
     </div>
   )
 }
 
-export default App
+export default App;
