@@ -1,0 +1,48 @@
+.ilustration {
+    height: 500px;
+    width: 580px;
+}
+
+.container-ilustration {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.painel-login {
+    display: flex;
+    align-items: center;
+}
+
+.container-login {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.button-cadastro {
+    width: 300px;
+    height: 70px;
+    font-size: 40px;
+    padding: 0;
+}
+
+.message-login {
+    padding-block: 20px;
+    font-size: 16px;
+    font-weight: bold; 
+    text-transform: uppercase;
+    color: #FFF;
+}
+
+.navbutton {
+    width: 100px;
+    padding: 0;
+    justify-content: center;
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    bottom: 0;
+}

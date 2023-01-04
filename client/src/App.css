@@ -4,9 +4,14 @@
   font-family: roboto, sans-serif;
 }
 
+html, body {
+  background-color: #3d3635;
+}
+
 button, .navbutton {
   display: flex;
   align-items: center;
+  justify-content: center;
   outline: 0;
   border: none;
   cursor: pointer;
