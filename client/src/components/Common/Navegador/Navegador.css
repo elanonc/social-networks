@@ -1,16 +1,17 @@
-.page {
+.navbar {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
   background-color: black;
+  border-radius: 10px;
+  width: 55%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 700px;
-  height: 50px;
+  justify-content: space-between;  
 }
-
+ 
 a {
   text-decoration: none;
   color: #FFF;
-  padding-inline: 10px;
   text-transform: uppercase;
   font-weight: 700; 
 }
@@ -18,4 +19,25 @@ a {
 
 a.active, button.active {
   background-color: #c57aff;
+}
+
+.navbar, ul {
+  display: flex;
+  margin: 0px;
+  align-items: center;
+}
+
+li {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+li {
+  margin-block: 16px;
+  margin-right: 16px;
+}
+
+.users-logo {
+  margin-left: 16px;
 }

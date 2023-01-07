@@ -17,7 +17,7 @@ export function PaginaLogin() {
         login(data.email, data.senha)
         .then((response) => {
             auth.setToken(response.data.token);
-            navigate("/");
+            navigate("/feed");
         })
         .catch((error) => {
             console.log(error);
@@ -28,11 +28,11 @@ export function PaginaLogin() {
         <div className="loginin">
             <form onSubmit={handleSubmit(tratarSubmit)}>
                 <div className="container-form">
-                    <label>Email</label>
+                    <label>Email:</label>
                     <input {...register("email")} type="text" placeholder="Ex: johndoe@email.com" />
                 </div>
                 <div className="container-form">
-                    <label>Senha</label>
+                    <label>Senha:</label>
                     <input type="password" {...register("senha")} placeholder="Ex: johndoe123" />
                 </div>
                 <div className="container-submit">

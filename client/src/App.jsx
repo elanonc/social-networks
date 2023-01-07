@@ -1,6 +1,5 @@
 import { useState, createContext } from 'react';
 import './App.css';
-// import { PaginaFeed } from './components/Pages/PaginaFeed/PaginaFeed';
 
 import { PaginaFeed } from "./components/Pages/PaginaFeed/PaginaFeed";
 import { PaginaPostar } from "./components/Pages/PaginaPostar/PaginaPostar";
@@ -25,11 +24,13 @@ function App() {
       <authContext.Provider value={{ token: token, setToken: setTokenLocal }}>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={token == null ? <PaginaFeed /> : <PaginaInicial />} ></Route>
-            {/* <Route path="/feed" element={<PaginaFeed/>}></Route> */}
-            <Route path="/cadastro" element={<PaginaCadastro/>}></Route>
-            <Route path="/postar" element={<PaginaPostar/>}></Route>
-            <Route path="/login" element={<PaginaLogin />}></Route>
+            {/* <Route path="/" element={token == null ? <PaginaFeed /> : <PaginaInicial />} /> */}
+            {/* <Route path="/feed" element={<PaginaFeed/>} /> */}
+            <Route path="/" element={<PaginaInicial />} />
+            <Route path="/feed" element={token == null ? <PaginaCadastro /> : <PaginaFeed />} />
+            <Route path="/cadastro" element={<PaginaCadastro/>} />
+            <Route path="/postar" element={<PaginaPostar/>} />
+            <Route path="/login" element={<PaginaLogin />} />
           </Routes>
         </BrowserRouter>
       </authContext.Provider>

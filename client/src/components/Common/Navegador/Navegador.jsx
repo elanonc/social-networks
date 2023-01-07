@@ -32,25 +32,27 @@ export function Navegador() {
     )
   } else {
     return (
-      <div className="page">
-        <div>
+      <div className="navbar">
+        <div className="users-logo">
             <a href="#">
-              Logo
+              Users-App
             </a>
         </div>
 
-      <NavLink className="navbutton" end to="/login" onClick={() => auth.setToken(null)} >Logout</NavLink> 
-      <NavLink className="navbutton" end to="/">Linha do Tempo</NavLink> 
-      <NavLink className="navbutton" end to="/postar">Postar</NavLink> 
-
-      <div>
-        <ul>
-          <li>
-            <a href="#">Elano N. Caitano</a>
-          </li>
-        </ul>
-      </div>
-
+        <div>
+          <ul>
+            <li>
+              <NavLink className="navbutton" end to="/">Linha do Tempo</NavLink> 
+            </li>
+            <li>
+              <NavLink className="navbutton" end to="/postar">Postar</NavLink> 
+            </li>
+            <li>
+              <NavLink className="navbutton" end to="/login" onClick={() => auth.setToken(null)} >Logout</NavLink> 
+            </li>
+          </ul>
+        </div>
+      
       </div>
     )
   }
