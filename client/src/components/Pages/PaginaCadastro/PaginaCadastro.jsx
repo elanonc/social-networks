@@ -26,16 +26,16 @@ export function PaginaCadastro() {
         <div className="signup">
             <form onSubmit={handleSubmit(tratarSubmit)}>
                 <div className="container-form">
-                    <input {...register("nome")} type="text" placeholder="Ex: John Doe" />
                     <label>Nome:</label>
+                    <input {...register("nome")} type="text" placeholder="Ex: John Doe" />
                 </div>
                 <div className="container-form">
-                    <input {...register("email")} type="text" placeholder="Ex: johndoe@email.com" />
                     <label>Email:</label>
+                    <input {...register("email")} type="text" placeholder="Ex: johndoe@email.com" />
                 </div>
                 <div className="container-form">
-                    <input type="password" {...register("senha")} placeholder="Ex: johndoe2023" />
                     <label>Senha:</label>
+                    <input type="password" {...register("senha")} placeholder="Ex: johndoe2023" />
                 </div>
                 <div className="container-submit">
                     <button type="submit">Enviar</button>

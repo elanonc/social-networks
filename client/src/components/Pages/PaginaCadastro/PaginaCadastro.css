@@ -13,6 +13,7 @@
 }
 
 .container-submit button{
+    margin-top: 30px;
     width: 50%;
     height: 50px;
     font-size: 15px;
@@ -28,7 +29,6 @@
     padding: 10px 0;
     font-size: 16px;
     color: #fff;
-    margin-bottom: 30px;
     border: none;
     border-bottom: 1px solid #fff;
     outline: none;
@@ -36,14 +36,11 @@
 }
 
 .container-form label {
-    margin-bottom: 40px;
-    position: absolute;
-    bottom: 20px;
-    left: 0;
-    padding: 10px 0;
+    padding: 10px 0 0 0;
     font-size: 16px;
     color: #fff;
     pointer-events: none;
+    display: flex;
 }
 
 .text-container {
@@ -51,7 +48,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 30px;
+}
+
+.text-container .message-login {
+    padding: 0;
 }
 
 .text-container .navlink-a {

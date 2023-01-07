@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { login } from "../../../api/usuarios.api";
 import { authContext } from "../../../App";
-import { Navegador } from '../../Common/Navegador/Navegador';
+import { NavLink } from "react-router-dom";
 
 import "./PaginaLogin.css";
 
@@ -25,14 +25,27 @@ export function PaginaLogin() {
     };
 
     return (
-        <div className="pagina">
-        <Navegador/>
-        <form className="formulario" onSubmit={handleSubmit(tratarSubmit)}>
-            <input {...register("email")} type="text" placeholder="Email" />
-            <br />
-            <input type="password" {...register("senha")} placeholder="Senha" />
-            <button type="submit">Enviar</button>
-        </form>
+        <div className="loginin">
+            <form onSubmit={handleSubmit(tratarSubmit)}>
+                <div className="container-form">
+                    <label>Email</label>
+                    <input {...register("email")} type="text" placeholder="Ex: johndoe@email.com" />
+                </div>
+                <div className="container-form">
+                    <label>Senha</label>
+                    <input type="password" {...register("senha")} placeholder="Ex: johndoe123" />
+                </div>
+                <div className="container-submit">
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+            <div className="text-container">
+                    <p className='message-login'> 
+                        Não tem uma conta? 
+                        <NavLink className='navlink-a' end to='/cadastro'>Cadastre-se</NavLink>    
+                    </p>
+                    
+            </div>
         </div>
     );
 }
