@@ -1,10 +1,60 @@
-.pagina {
+.signup {
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column;  
 }
 
-.formulario {
-    margin-top: 100px;
+.container-submit{
+    display: flex;
+    justify-content: center;
+}
+
+.container-submit button{
+    width: 50%;
+    height: 50px;
+    font-size: 15px;
+    background-color: #4CAF50
+}
+
+.container-form {
+    position: relative;
+}
+
+.container-form input {
+    width: 400px;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.container-form label {
+    margin-bottom: 40px;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.text-container .navlink-a {
+    color: #4CAF50;
+    text-decoration: none;
 }

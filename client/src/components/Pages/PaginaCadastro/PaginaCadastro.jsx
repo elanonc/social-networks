@@ -2,7 +2,7 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { criarUsuario } from "../../../api/usuarios.api";
-import { Navegador } from '../../Common/Navegador/Navegador';
+import { NavLink } from "react-router-dom";
 
 import "./PaginaCadastro.css";
 
@@ -23,16 +23,31 @@ export function PaginaCadastro() {
     };
     
     return (
-        <div className="pagina">
-            <Navegador/>
-            <form className="formulario" onSubmit={handleSubmit(tratarSubmit)}>
-                <input {...register("nome")} type="text" placeholder="Nome" />
-                <br />
-                <input {...register("email")} type="text" placeholder="Email" />
-                <br />
-                <input type="password" {...register("senha")} placeholder="Senha" />
-                <button type="submit">Enviar</button>
+        <div className="signup">
+            <form onSubmit={handleSubmit(tratarSubmit)}>
+                <div className="container-form">
+                    <input {...register("nome")} type="text" placeholder="Ex: John Doe" />
+                    <label>Nome:</label>
+                </div>
+                <div className="container-form">
+                    <input {...register("email")} type="text" placeholder="Ex: johndoe@email.com" />
+                    <label>Email:</label>
+                </div>
+                <div className="container-form">
+                    <input type="password" {...register("senha")} placeholder="Ex: johndoe2023" />
+                    <label>Senha:</label>
+                </div>
+                <div className="container-submit">
+                    <button type="submit">Enviar</button>
+                </div>
             </form>
+            <div className="text-container">
+                <p className='message-login'> 
+                    Já possui cadastro? 
+                    <NavLink className='navlink-a' end to='/login'>Entrar</NavLink>    
+                </p>
+                
+            </div>
         </div>
       );
 }

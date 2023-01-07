@@ -14,14 +14,6 @@ export function PaginaInicial() {
           <button className='button-cadastro' onClick={() => navigate('/cadastro')}>Cadastrar</button>
           <div className=""> <p className='message-login'> Já possui cadastro? </p> </div>
           <NavLink className='navbutton' end to='/login'>Entrar</NavLink>
-          {/* <div className='container-buttons'>
-            <p>
-              Já possui cadastro? 
-            </p>
-          </div>
-          <div className='container-navlink'>
-            <NavLink className='navbutton' end to='/login'>Login</NavLink>
-          </div> */}
         </div>
       </div>
       <div className='container-ilustration'>
