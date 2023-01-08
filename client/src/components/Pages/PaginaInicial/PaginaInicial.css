@@ -19,11 +19,12 @@
     flex-direction: column;
 }
 
-.button-cadastro {
+.container-login .button-cadastro {
     width: 300px;
     height: 70px;
     font-size: 40px;
     padding: 0;
+    background-color: #4CAF50;
 }
 
 .message-login {
@@ -36,6 +37,8 @@
 
 .navbutton {
     padding: 0;
+    color: #4CAF50;
+    text-decoration: none;
 }
 
 .home {
