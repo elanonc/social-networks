@@ -41,3 +41,14 @@ li {
 .users-logo {
   margin-left: 16px;
 }
+
+
+.navbutton {
+  font-size: 16px;
+}
+
+.nav-linhadotempo {
+  width: 250px;
+  padding: 0;
+  font-size: 16px
+}

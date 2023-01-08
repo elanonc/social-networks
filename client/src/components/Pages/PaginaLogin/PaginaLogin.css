@@ -6,3 +6,7 @@
     align-items: center;
     flex-direction: column;  
 }
+
+.navlink-a {
+    margin-left: 10px;
+}

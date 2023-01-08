@@ -8,7 +8,7 @@ html, body {
   background-color: #3d3635;
 }
 
-button, .navbutton {
+button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,6 +25,6 @@ button, .navbutton {
   text-transform: uppercase;
 }
 
-button:hover, .navbutton:hover {
+button:hover {
   background-color: #772ce8;
 }

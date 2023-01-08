@@ -1,7 +1,19 @@
 .container {
-    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
+.text-editor {
+    /* background-color: #FFF; */
+    width:600px;
+    height:300px;
+}
+
+
+/* 
 .form-container {
     display: grid;
     place-content: center;
@@ -23,4 +35,4 @@
     display: flex;
     align-items: flex-end;
     flex-direction: column;
-}
+} */

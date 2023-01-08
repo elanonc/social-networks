@@ -1,6 +1,28 @@
-.pagina {
+.post-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.post-container textarea {
+    height: 160px;     
+    width: 640px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+
+.post-container label {
+    padding: 10px 0 0 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    display: flex;
+    margin-bottom: 16px;
+    margin-top: 100px;
 }

@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { criarPost } from "../../../api/posts.api";
 import { authContext } from "../../../App";
+import { FormPostar } from "../../Common/FormPostar/FormPostar";
 
 import { Navegador } from '../../Common/Navegador/Navegador';
 // import { FormPostar } from '../../Common/FormPostar/FormPostar';
@@ -25,12 +26,19 @@ export function PaginaPostar() {
     };
 
     return (
-      <div className="pagina">
+      <div className="post-container">
           <Navegador/>
           <form className="formulario" onSubmit={handleSubmit(tratarSubmit)}>
-            <textarea  {...register("texto")} />
-            <input type="submit" value="Enviar" />
+            <div className="text">
+              <label>O que está pensando?: </label>
+  
+              <textarea {...register("texto")}/>
+            </div>
+            <div className="container-submit">
+              <button type="submit">Enviar</button>
+            </div>
           </form>
+          {/* <FormPostar/> */}
       </div>
     )
 }

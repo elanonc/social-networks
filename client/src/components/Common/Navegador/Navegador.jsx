@@ -16,9 +16,9 @@ export function Navegador() {
               Logo
             </a>
         </div>
-
+{/* 
       <NavLink className="navbutton" end to="/cadastro">Cadastro</NavLink> 
-      <NavLink className="navbutton" end to="/login">Login</NavLink> 
+      <NavLink className="navbutton" end to="/login">Login</NavLink>  */}
 
       <div>
         <ul>
@@ -42,7 +42,7 @@ export function Navegador() {
         <div>
           <ul>
             <li>
-              <NavLink className="navbutton" end to="/">Linha do Tempo</NavLink> 
+              <NavLink id="nav-linhadotempo" end to="/">Linha do Tempo</NavLink> 
             </li>
             <li>
               <NavLink className="navbutton" end to="/postar">Postar</NavLink> 
