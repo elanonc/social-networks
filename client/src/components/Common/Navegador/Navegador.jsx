@@ -42,7 +42,7 @@ export function Navegador() {
         <div>
           <ul>
             <li>
-              <NavLink id="nav-linhadotempo" end to="/">Linha do Tempo</NavLink> 
+              <NavLink id="nav-linhadotempo" end to="/feed">Linha do Tempo</NavLink> 
             </li>
             <li>
               <NavLink className="navbutton" end to="/postar">Postar</NavLink> 

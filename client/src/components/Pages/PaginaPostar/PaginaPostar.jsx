@@ -18,7 +18,7 @@ export function PaginaPostar() {
       criarPost(data.texto, 0, auth.token)
         .then((post) => {
           console.log(post);
-          navigate("/");
+          navigate("/feed");
         })
         .catch((error) => {
           console.log(error);
